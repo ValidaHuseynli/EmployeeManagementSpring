@@ -1,25 +1,36 @@
 package com.example.EmployeeProject.mapper;
 
-import com.example.EmployeeProject.dto.EmployeeRequest;
-import com.example.EmployeeProject.dto.EmployeeResponse;
+import com.example.EmployeeProject.dto.request.EmployeeRequest;
+import com.example.EmployeeProject.dto.response.EmployeeResponse;
+import com.example.EmployeeProject.entity.Department;
 import com.example.EmployeeProject.entity.Employee;
-import com.example.EmployeeProject.entity.Position;
+import com.example.EmployeeProject.exception.DepartmentNotFoundException;
+import com.example.EmployeeProject.repository.DepartmentRepository;
+import com.example.EmployeeProject.util.EmployeeUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class EmployeeMapper {
+
+    private final DepartmentRepository departmentRepository;
 
     public Employee requestToEntity(EmployeeRequest request) {
         if (request == null)
             return null;
 
+        Department department = departmentRepository.findById(request.getDepartmentId())
+                .orElseThrow(() -> new DepartmentNotFoundException("Department not found"));
+
         Employee employee = new Employee();
         employee.setName(request.getName());
         employee.setSurname(request.getSurname());
-        employee.setPosition(Position.valueOf(request.getPosition()));
+        employee.setPosition(EmployeeUtil.validPosition(request.getPosition()));
         employee.setSalary(request.getSalary());
+        employee.setDepartment(department);
         return employee;
 
     }
