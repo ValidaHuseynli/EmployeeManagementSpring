@@ -1,7 +1,7 @@
 package com.example.EmployeeProject.service;
 
-import com.example.EmployeeProject.dto.request.DepartmentRequest;
-import com.example.EmployeeProject.dto.response.DepartmentResponse;
+import com.example.EmployeeProject.model.dto.request.DepartmentRequest;
+import com.example.EmployeeProject.model.dto.response.DepartmentResponse;
 
 
 public interface DepartmentService {

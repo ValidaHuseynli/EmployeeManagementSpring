@@ -1,9 +1,9 @@
 package com.example.EmployeeProject.service;
 
-import com.example.EmployeeProject.dto.request.DepartmentTransferRequest;
-import com.example.EmployeeProject.dto.request.EmployeeRequest;
-import com.example.EmployeeProject.dto.response.DepartmentTransferResponse;
-import com.example.EmployeeProject.dto.response.EmployeeResponse;
+import com.example.EmployeeProject.model.dto.request.DepartmentTransferRequest;
+import com.example.EmployeeProject.model.dto.request.EmployeeRequest;
+import com.example.EmployeeProject.model.dto.response.DepartmentTransferResponse;
+import com.example.EmployeeProject.model.dto.response.EmployeeResponse;
 
 import java.util.List;
 

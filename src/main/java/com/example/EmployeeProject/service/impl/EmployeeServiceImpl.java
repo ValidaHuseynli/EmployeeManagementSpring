@@ -1,14 +1,14 @@
 package com.example.EmployeeProject.service.impl;
 
-import com.example.EmployeeProject.dto.request.DepartmentTransferRequest;
-import com.example.EmployeeProject.dto.request.EmployeeRequest;
-import com.example.EmployeeProject.dto.response.DepartmentTransferResponse;
-import com.example.EmployeeProject.dto.response.EmployeeResponse;
-import com.example.EmployeeProject.entity.Employee;
-import com.example.EmployeeProject.entity.EmployeeSalaryHistory;
-import com.example.EmployeeProject.entity.EmployeePromotionHistory;
-import com.example.EmployeeProject.entity.Department;
-import com.example.EmployeeProject.entity.Position;
+import com.example.EmployeeProject.model.dto.request.DepartmentTransferRequest;
+import com.example.EmployeeProject.model.dto.request.EmployeeRequest;
+import com.example.EmployeeProject.model.dto.response.DepartmentTransferResponse;
+import com.example.EmployeeProject.model.dto.response.EmployeeResponse;
+import com.example.EmployeeProject.model.entity.Employee;
+import com.example.EmployeeProject.model.entity.EmployeeSalaryHistory;
+import com.example.EmployeeProject.model.entity.EmployeePromotionHistory;
+import com.example.EmployeeProject.model.entity.Department;
+import com.example.EmployeeProject.model.enums.Position;
 import com.example.EmployeeProject.exception.DepartmentNotFoundException;
 import com.example.EmployeeProject.exception.EmployeeNotFoundException;
 import com.example.EmployeeProject.mapper.EmployeeMapper;
