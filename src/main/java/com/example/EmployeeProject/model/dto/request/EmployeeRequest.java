@@ -1,5 +1,6 @@
-package com.example.EmployeeProject.dto.request;
+package com.example.EmployeeProject.model.dto.request;
 
+import com.example.EmployeeProject.model.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

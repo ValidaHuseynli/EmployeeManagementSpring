@@ -1,15 +1,14 @@
-package com.example.EmployeeProject.dto.response;
+package com.example.EmployeeProject.model.dto.request;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DepartmentResponse {
+public class DepartmentRequest{
 
-    private Long departmentId;
     private String name;
     private Integer maxEmployeeCount;
     private String description;

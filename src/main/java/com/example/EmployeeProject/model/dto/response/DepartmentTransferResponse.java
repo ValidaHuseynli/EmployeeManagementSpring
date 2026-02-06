@@ -1,6 +1,6 @@
-package com.example.EmployeeProject.dto.response;
+package com.example.EmployeeProject.model.dto.response;
 
-import com.example.EmployeeProject.entity.Position;
+import com.example.EmployeeProject.model.enums.Position;
 import lombok.Builder;
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.example.EmployeeProject.dto.request;
+package com.example.EmployeeProject.model.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,5 +11,5 @@ public class DepartmentTransferRequest {
 
     private Long targetDepartmentId;
     private Double newSalary;
-    private Boolean promote;
+    private Boolean promote=false;
 }

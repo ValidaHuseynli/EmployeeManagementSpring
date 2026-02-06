@@ -1,4 +1,4 @@
-package com.example.EmployeeProject.entity;
+package com.example.EmployeeProject.model.enums;
 
 public enum Position {
     INTERN,

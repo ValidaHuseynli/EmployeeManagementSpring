@@ -1,8 +1,8 @@
 package com.example.EmployeeProject.mapper;
 
-import com.example.EmployeeProject.dto.request.DepartmentRequest;
-import com.example.EmployeeProject.dto.response.DepartmentResponse;
-import com.example.EmployeeProject.entity.Department;
+import com.example.EmployeeProject.model.dto.request.DepartmentRequest;
+import com.example.EmployeeProject.model.dto.response.DepartmentResponse;
+import com.example.EmployeeProject.model.entity.Department;
 import org.springframework.stereotype.Component;
 
 @Component

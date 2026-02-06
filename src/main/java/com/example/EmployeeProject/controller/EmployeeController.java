@@ -1,10 +1,11 @@
 package com.example.EmployeeProject.controller;
 
-import com.example.EmployeeProject.dto.request.DepartmentTransferRequest;
-import com.example.EmployeeProject.dto.request.EmployeeRequest;
-import com.example.EmployeeProject.dto.response.DepartmentTransferResponse;
-import com.example.EmployeeProject.dto.response.EmployeeResponse;
+import com.example.EmployeeProject.model.dto.request.DepartmentTransferRequest;
+import com.example.EmployeeProject.model.dto.request.EmployeeRequest;
+import com.example.EmployeeProject.model.dto.response.DepartmentTransferResponse;
+import com.example.EmployeeProject.model.dto.response.EmployeeResponse;
 import com.example.EmployeeProject.service.EmployeeService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/employee")
+@RequestMapping("/api/v1/employee")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearerAuth")
 @Slf4j
 public class EmployeeController {
 
@@ -55,6 +57,8 @@ public class EmployeeController {
     DepartmentTransferResponse departmentTransfer(@PathVariable Long id, @RequestBody DepartmentTransferRequest request) throws Exception {
         return empService.departmentTransfer(id, request);
     }
+
+
 
 
 

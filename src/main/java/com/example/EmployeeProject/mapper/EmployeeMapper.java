@@ -1,9 +1,9 @@
 package com.example.EmployeeProject.mapper;
 
-import com.example.EmployeeProject.dto.request.EmployeeRequest;
-import com.example.EmployeeProject.dto.response.EmployeeResponse;
-import com.example.EmployeeProject.entity.Department;
-import com.example.EmployeeProject.entity.Employee;
+import com.example.EmployeeProject.model.dto.request.EmployeeRequest;
+import com.example.EmployeeProject.model.dto.response.EmployeeResponse;
+import com.example.EmployeeProject.model.entity.Department;
+import com.example.EmployeeProject.model.entity.Employee;
 import com.example.EmployeeProject.exception.DepartmentNotFoundException;
 import com.example.EmployeeProject.repository.DepartmentRepository;
 import com.example.EmployeeProject.util.EmployeeUtil;
@@ -45,6 +45,7 @@ public class EmployeeMapper {
         response.setSurname(employee.getSurname());
         response.setPosition(employee.getPosition());
         response.setSalary(employee.getSalary());
+        response.setDepartmentName(employee.getDepartment().getName());
         response.setCreatedAt(employee.getCreatedAt());
         response.setUpdatedAt(employee.getUpdatedAt());
 

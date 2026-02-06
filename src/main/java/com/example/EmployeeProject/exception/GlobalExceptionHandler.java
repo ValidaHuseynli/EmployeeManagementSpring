@@ -1,6 +1,6 @@
 package com.example.EmployeeProject.exception;
 
-import com.example.EmployeeProject.dto.response.ErrorResponse;
+import com.example.EmployeeProject.model.dto.response.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

@@ -1,7 +1,6 @@
-package com.example.EmployeeProject.dto.response;
+package com.example.EmployeeProject.model.dto.response;
 
-import com.example.EmployeeProject.entity.Department;
-import com.example.EmployeeProject.entity.Position;
+import com.example.EmployeeProject.model.enums.Position;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +17,7 @@ public class EmployeeResponse {
     private String surname;
     private Position position;
     private Double salary;
-    private Department department;
+    private String departmentName;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

@@ -1,17 +1,8 @@
-package com.example.EmployeeProject.entity;
+package com.example.EmployeeProject.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Column;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.EnumType;
+import com.example.EmployeeProject.model.enums.Position;
+import com.example.EmployeeProject.model.enums.Role;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -45,6 +36,9 @@ public class Employee {
     @Column(nullable = false)
     private Double salary;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
@@ -60,6 +54,7 @@ public class Employee {
             orphanRemoval = true
     )
     private List<EmployeeSalaryHistory> employeeSalaryHistories;
+
 
     @CreationTimestamp
     private LocalDateTime createdAt;
